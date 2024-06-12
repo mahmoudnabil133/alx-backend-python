@@ -10,12 +10,18 @@ async def say_bye():
     print("Goodbye!")
     await asyncio.sleep(1)  # Simulate another I/O operation
     print("See you!")
+async def oh():
+    print("mybrother")
+    await asyncio.sleep(1)  # Simulate another I/O operation
+    print("third task")
 
 async def main():
     task1 = asyncio.create_task(say_hello())  # Create the first task
     task2 = asyncio.create_task(say_bye())    # Create the second task
+    task3 = asyncio.create_task(oh())    # Create the second task
     await task1  # Wait for the first task to complete
     await task2  # Wait for the second task to complete
+    await task3  # Wait for the second task to complete
     print('haha')
 
 # Run the main function
