@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Type-annotated function str"""
+"""Type-annotated function define variables"""
 
 
 a:int = 1
