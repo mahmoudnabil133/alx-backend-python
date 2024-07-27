@@ -33,7 +33,7 @@ class TestAccessNestedMap(unittest.TestCase):
 
 
 class TestGetJson(unittest.TestCase):
-    "test class"
+    "test second class"
     @parameterized.expand([
         ('http://example.com', {"payload": True}),
         ('http://holberton.io', {"payload": False})
@@ -41,7 +41,7 @@ class TestGetJson(unittest.TestCase):
     @patch('requests.get')
     def test_get_json(self, test_url, test_payload, mock_get):
         """
-        test method
+        test this method
         """
         mock_get.return_value.json.return_value = test_payload
         res = get_json(test_url)
